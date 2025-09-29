@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip</title>
+    <!-- Make sure this CSS is Bootstrap 5.3.8, or swap to CDN below -->
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <!-- Or use: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <h1 class="display-3 text-center my-4">Tooltip</h1>
+    <hr>
+
+    <div class="container my-4">
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Hello World!">
+            Tooltip on top
+        </button>
+        <hr>
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" title="Hello World!">
+            Tooltip on left
+        </button>
+        <hr>
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Hello World!">
+            Tooltip on right
+        </button>
+        <hr>
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hello World!">
+            Tooltip on bottom
+        </button>
+        <hr>
+        <button id="hello" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
+            title="<h2>Hello World!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ullam?</p>">
+            Tooltip on top
+        </button>
+        <hr>
+        <button class="btn btn-secondary" onclick="showToolTip()">
+            Show Tooltip
+        </button>
+        <button class="btn btn-danger" onclick="hideToolTip()">
+            Hide Tooltip
+        </button>
+        <button class="btn btn-warning" onclick="toolTip()">
+            Toggle Tooltip
+        </button>
+    </div>
+
+    <div style="margin-bottom:100px;"></div>
+
+    <!-- Keep ONLY this one JS include -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            triggerList.forEach(el => new bootstrap.Tooltip(el));
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const el = document.getElementById('hello');
+            new bootstrap.Tooltip(el, {
+                html: true,
+                container: 'body',
+                sanitize: false
+            });
+        });
+
+        function showToolTip() {
+            const el = document.getElementById('hello');
+            const tip = bootstrap.Tooltip.getOrCreateInstance(el);
+            tip.show();
+        }
+        function hideToolTip() {
+            const el = document.getElementById('hello');
+            const tip = bootstrap.Tooltip.getOrCreateInstance(el);
+            tip.close();
+        }
+    </script>
+</body>
+
+</html>
