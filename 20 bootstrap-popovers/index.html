@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popovers</title>
+    <!-- Use your local v5.3.8 CSS or swap to CDN below -->
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <h1 class="display-3 text-center my-4">Popovers</h1>
+    <hr>
+
+    <div class="container my-4">
+        <button class="btn btn-sm btn-primary" data-bs-toggle="popover" data-bs-title="Hello world!"
+            data-bs-content="lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fugit."
+            data-bs-placement="left">
+            Toggle popover
+        </button>
+
+        <button class="btn btn-sm btn-success" data-bs-toggle="popover" data-bs-title="Hello world!"
+            data-bs-content="lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fugit."
+            data-bs-placement="top">
+            Toggle popover
+        </button>
+
+        <button class="btn btn-sm btn-secondary" data-bs-toggle="popover" data-bs-title="Hello world!"
+            data-bs-content="lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fugit."
+            data-bs-placement="right">
+            Toggle popover
+        </button>
+
+        <button id="btPopover" class="btn btn-sm btn-warning" data-bs-toggle="popover" data-bs-title="Hello world!"
+            data-bs-content="lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fugit."
+            data-bs-placement="bottom">
+            Toggle popover
+        </button>
+
+        <hr>
+
+        <!-- This one closes automatically when focus leaves the button -->
+        <button class="btn btn-sm btn-info" data-bs-trigger="focus" data-bs-toggle="popover"
+            data-bs-title="Hello world!"
+            data-bs-content="lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fugit."
+            data-bs-placement="bottom">
+            Toggle popover (focus)
+        </button>
+
+        <hr>
+        <button class="btn btn-danger btn-sm" onclick="showPopover()">ShowPopover</button>
+    </div>
+
+    <div style="margin-bottom:100px;"></div>
+
+    <!-- jQuery then Bootstrap 5 bundle -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function ($) {
+            const defaults = { container: 'body' };
+            const inst = (el, opts) =>
+                bootstrap.Popover.getOrCreateInstance(el, { ...defaults, ...(opts || {}) });
+
+            // Global helper functions
+            window.showPopover = function (selector, options) {
+                $(selector).each(function () { inst(this, options).show(); });
+            };
+            window.hidePopover = function (selector) {
+                $(selector).each(function () { inst(this).hide(); });
+            };
+            window.togglePopover = function (selector) {
+                $(selector).each(function () { inst(this).toggle(); });
+            };
+
+            // Optional: jQuery plugin-style bridge
+            $.fn.bsPopover = function (action, options) {
+                return this.each(function () {
+                    const p = inst(this, options);
+                    if (action === 'show') p.show();
+                    else if (action === 'hide') p.hide();
+                    else if (action === 'toggle') p.toggle();
+                    else if (action === 'dispose') p.dispose();
+                    else if (action === 'update') p.update();
+                });
+            };
+
+            // Auto-init any data-API popovers
+            $(function () {
+                $('[data-bs-toggle="popover"]').each(function () { inst(this); });
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>
