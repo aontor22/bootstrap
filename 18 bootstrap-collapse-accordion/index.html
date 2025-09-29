@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collapse & Accordion</title>
+    <!-- Make sure this CSS is Bootstrap 5.3.8, or swap to CDN below -->
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <!-- Or use: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <h1 class="display-3 text-center my-4">Collapse & Accordion</h1>
+    <hr>
+
+    <div class="container">
+        <button type="button" class="btn btn-primary mb-4" data-bs-toggle="collapse" data-bs-target="#collapse1"
+            aria-expanded="false" aria-controls="collapse1">
+            Read More
+        </button>
+
+        <div class="collapse" id="collapse1">
+            <div class="card">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <div id="accordion" role="tablist">
+            <div class="card">
+                <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                        <a data-bs-toggle="collapse" class="text-decoration-none" href="#section1">Section 1</a>
+                    </h5>
+                </div>
+                <div class="collapse show" id="section1" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea repudiandae accusamus, culpa maiores rerum aliquam consequuntur atque. Nesciunt, error.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                        <a data-bs-toggle="collapse" class="text-decoration-none" href="#section2">Section 2</a>
+                    </h5>
+                </div>
+                <div class="collapse " id="section2" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea repudiandae accusamus, culpa maiores rerum aliquam consequuntur atque. Nesciunt, error.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                        <a data-bs-toggle="collapse" class="text-decoration-none" href="#section3">Section 3</a>
+                    </h5>
+                </div>
+                <div class="collapse " id="section3" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea repudiandae accusamus, culpa maiores rerum aliquam consequuntur atque. Nesciunt, error.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-bottom:100px;"></div>
+
+    <!-- Keep ONLY this one JS include -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
