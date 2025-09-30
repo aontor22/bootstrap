@@ -1,24 +1,28 @@
+// Variables
 $body-bg: #333;
 $font-color: #fff;
 $primary-color: #008ed6;
 $icon-font-size: 24px;
 
+// Body Styles
 body {
     background: $body-bg;
     color: $font-color;
-    // space for fixed-top navbar (tweak to your navbar height)
+    // Add padding-top if you have a fixed-top navbar
 }
 
+// Navbar Styles
 .navbar {
     border-bottom: 3px solid $primary-color;
-    // use rgba so only the background is translucent (not the text)
-    background: rgba(41, 43, 44, 0.85);
+    background: rgba(41, 43, 44, 0.85); // translucent background
 }
 
+// Card Styles
 .card {
     color: $font-color;
 }
 
+// Home Top Section
 #home-top-section {
     background: url('../img/office.jpeg') no-repeat center top;
     background-size: cover;
@@ -54,10 +58,30 @@ body {
     }
 }
 
-#explore-main-section{
-    .fa-check{
+#explore-main-section {
+    .fa-check {
         font-size: $icon-font-size;
-        background: $body-bg;
+        background: #333;
+        color: #fff;
+        border-radius: 3px;
+        padding: 5px 3px;
+    }
+}
+
+#create-main-section {
+    .fa-check {
+        font-size: $icon-font-size;
+        background: #fff;
+        color: $primary-color;
+        border-radius: 3px;
+        padding: 5px 3px;
+    }
+}
+
+#share-main-section {
+    .fa-check {
+        font-size: $icon-font-size;
+        background: #333;
         color: #fff;
         border-radius: 3px;
         padding: 5px 3px;
@@ -70,13 +94,13 @@ body {
 // Media Queries
 
 @media (max-width: 768px) {
-    #home-top-section h1{
+    #home-top-section h1 {
         font-size: 36px;
     }
 }
 
 @media (max-width: 768px) {
-    #explore-head-section h1{
+    #explore-head-section h1 {
         padding-top: 100px;
     }
 }

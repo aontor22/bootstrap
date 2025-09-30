@@ -50,6 +50,22 @@ body {
   padding: 5px 3px;
 }
 
+#create-main-section .fa-check {
+  font-size: 24px;
+  background: #fff;
+  color: #008ed6;
+  border-radius: 3px;
+  padding: 5px 3px;
+}
+
+#share-main-section .fa-check {
+  font-size: 24px;
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 3px;
+}
+
 @media (max-width: 768px) {
   #home-top-section h1 {
     font-size: 36px;
