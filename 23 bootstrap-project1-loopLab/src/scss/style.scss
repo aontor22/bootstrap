@@ -1,5 +1,82 @@
-.navbar{
-    border-bottom: 3px solid #008ed6;
-    background: #292b2c;
-    opacity: 0.7;
+$body-bg: #333;
+$font-color: #fff;
+$primary-color: #008ed6;
+$icon-font-size: 24px;
+
+body {
+    background: $body-bg;
+    color: $font-color;
+    // space for fixed-top navbar (tweak to your navbar height)
+}
+
+.navbar {
+    border-bottom: 3px solid $primary-color;
+    // use rgba so only the background is translucent (not the text)
+    background: rgba(41, 43, 44, 0.85);
+}
+
+.card {
+    color: $font-color;
+}
+
+#home-top-section {
+    background: url('../img/office.jpeg') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+    position: relative;
+
+    .dark-overlay {
+        position: absolute;
+        inset: 0; // top:0; right:0; bottom:0; left:0
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .home-inner {
+        position: relative; // sit above overlay
+        padding-top: 150px; // keep this, remove the duplicate 45px
+        padding-bottom: 100px;
+    }
+
+    .card-form {
+        opacity: 0.9;
+    }
+
+    // STYLE THE CHECK ICONS (font awesome)
+    .fa-check {
+        background: #fff;
+        color: $primary-color;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: $icon-font-size;
+        line-height: 1;
+        display: inline-block;
+    }
+}
+
+#explore-main-section{
+    .fa-check{
+        font-size: $icon-font-size;
+        background: $body-bg;
+        color: #fff;
+        border-radius: 3px;
+        padding: 5px 3px;
+    }
+}
+
+
+
+
+// Media Queries
+
+@media (max-width: 768px) {
+    #home-top-section h1{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    #explore-head-section h1{
+        padding-top: 100px;
+    }
 }
