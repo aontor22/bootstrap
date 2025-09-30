@@ -1,0 +1,23 @@
+{
+  "name": "22-bootstrap-npm-dependencies",
+  "version": "1.0.0",
+  "description": "Bootstrap 5.3.8 starter",
+  "license": "MIT",
+  "author": "Udoy",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.77.0"
+  }
+}
