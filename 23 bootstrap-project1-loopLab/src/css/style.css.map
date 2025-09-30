@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AAEA;EACI,YAHO","sourcesContent":["$bg-color: #333;\r\n\r\nbody{\r\n    background: $bg-color;\r\n}"],"file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA","sourcesContent":[".navbar{\r\n    border-bottom: 3px solid #008ed6;\r\n    background: #292b2c;\r\n    opacity: 0.7;\r\n}"],"file":"style.css"}
