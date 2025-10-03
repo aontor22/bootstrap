@@ -7,8 +7,9 @@ body {
 
 #showcase {
     background-image: url('../img/bg.jpg');
+    background: no-repeat;
 
-    .primary-overlay{
+    .primary-overlay {
         background: $primary-overlay;
     }
 }

@@ -1,3 +1,11 @@
 body {
-  background: #333;
+  background: #fff;
+}
+
+#showcase {
+  background-image: url("../img/bg.jpg");
+  background: no-repeat;
+}
+#showcase .primary-overlay {
+  background: rgba(50, 146, 156, 0.7);
 }/*# sourceMappingURL=style.css.map */
