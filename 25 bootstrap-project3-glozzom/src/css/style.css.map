@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["style.scss"],"names":[],"mappings":"AAEA;EACI,YAHO","sourcesContent":["$bg-color: #333;\r\n\r\nbody{\r\n    background: $bg-color;\r\n}"],"file":"style.css"}
