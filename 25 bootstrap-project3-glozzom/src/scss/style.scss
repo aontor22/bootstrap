@@ -1,5 +1,29 @@
-$bg-color: #333;
+.navbar{
+    background: #000;
+    .nav-fill{
+        padding-left: 1em;
+        .nav-link{
+            text-transform: uppercase;
+        }
+    }
+}
 
-body{
-    background: $bg-color;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav-fill{
+        padding-left: 0;
+    }
 }
