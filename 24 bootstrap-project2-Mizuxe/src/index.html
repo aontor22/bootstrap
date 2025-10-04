@@ -26,8 +26,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-fill pe-3"><a class="nav-link" href="#showcase">Home</a></li>
                     <li class="nav-fill pe-3"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-fill pe-3"><a class="nav-link" href="#create-head-section">Meet The Authors</a></li>
-                    <li class="nav-fill pe-3"><a class="nav-link" href="#share-head-section">Contact</a></li>
+                    <li class="nav-fill pe-3"><a class="nav-link" href="#authors">Meet The Authors</a></li>
+                    <li class="nav-fill pe-3"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -319,39 +319,39 @@
                         <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta dolorem,
                             laudantium alias consequuntur expedita quis.</p>
                     </div>
+
                     <form>
-                        <div class="form-group">
+                        <!-- Name -->
+                        <div class="mb-3">
                             <div class="input-group input-group-lg">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fa-solid fa-user"></i>
-                                    </span>
-                                </div>
-                                <input class="form-control form-control-lg" type="text" placeholder="Name">
+                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Name" aria-label="Name">
                             </div>
                         </div>
-                        <div class="form-group">
+
+                        <!-- Email -->
+                        <div class="mb-3">
                             <div class="input-group input-group-lg">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </span>
-                                </div>
-                                <input class="form-control form-control-lg" type="email" placeholder="Email">
+                                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email">
                             </div>
                         </div>
-                        <div class="form-group">
+
+                        <!-- Message -->
+                        <div class="mb-3">
                             <div class="input-group input-group-lg">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fa-solid fa-pencil"></i>
-                                    </span>
-                                </div>
-                                <textarea name="message" rows="5" class="form-control form-control-lg"></textarea>
+                                <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
+                                <textarea class="form-control" rows="5" placeholder="Message"
+                                    aria-label="Message"></textarea>
                             </div>
                         </div>
+
                         <button class="btn btn-primary btn-lg text-light w-100" type="submit">Submit</button>
                     </form>
+                </div>
+
+                <div class="col align-self-center">
+                    <img src="img/m-solid-full.svg" alt="logo" class="img-fluid d-none d-lg-block">
                 </div>
             </div>
         </div>
@@ -359,6 +359,39 @@
 
     <!-- Contact section end -->
 
+    <!-- Footer section start -->
+
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row align-items-center pb-4">
+                <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
+                    <a href="#showcase" class="navbar-brand">
+                        <img src="img/m-solid-full.svg" alt="Mizuxe" class="align-text-bottom"
+                            style="height:32px" />izuxe
+                    </a>
+                    <p class="mt-2 small text-muted">Connect. Create. Share.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0 text-center">
+                    <p class="mb-2 fw-bold">Social Contacts</p>
+                    <a href="#" class="mx-2 text-light fs-4"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#" class="mx-2 text-light fs-4"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="#" class="mx-2 text-light fs-4"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="mb-1">Author:</p>
+                    <span class="fw-bold text-primary">Udoy Chowdhury</span>
+                </div>
+            </div>
+            <hr class="border-light">
+            <div class="row text-light">
+                <div class="col-12 text-center">
+                    <small class="text-white">All copyright 2025 reserved by &copy; <strong>Udoy
+                            Chowdhury</strong>.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section end -->
 
 
 
