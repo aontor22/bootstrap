@@ -1,15 +1,106 @@
 $bg-color: #fff;
+$primary: #3292a6;
 $primary-overlay: rgba(50, 146, 156, 0.7);
+
+$nav-h: 60px;
+$nav-h-lg: 60px;
 
 body {
     background: $bg-color;
+    color: #252525;
+    padding-top: $nav-h; // space for fixed navbar
+
+    @media (min-width: 992px) {
+        padding-top: $nav-h-lg;
+    }
+}
+
+.navbar {
+    box-shadow: 2px 2px 5px $primary;
+    background: rgba(255, 255, 255, .95); // keep text opaque vs. opacity: .9
+
+    .nav-fill {
+        font-size: 1.1rem;
+        padding-right: 20px;
+
+        .nav-link {
+            color: #252525;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .nav-fill:last-child {
+        padding-right: 0;
+    }
 }
 
 #showcase {
-    background-image: url('../img/bg.jpg');
-    background: no-repeat;
+    position: relative;
+    background-image: url(../img/bg1.jpg);
 
     .primary-overlay {
-        background: $primary-overlay;
+        position: relative; // keep your overlay wrapper
+        background: rgba(50, 146, 156, .7);
+        width: 100%;
+    }
+
+    /* make the right column image fill and crop nicely */
+    .hero-img-col {
+        position: relative;
+        min-height: 600px;
+    }
+
+    .hero-img {
+        position: absolute;
+        inset: 0;
+        margin-left: 150px;
+        margin-top: 100px;
+        min-height: 200px;
+        width: 300px;
+        object-fit: cover; // <-- key: fills the half, crops like your mock
+        display: block;
+    }
+}
+
+#subscribe {
+    background: #252525;
+}
+
+#authors {
+    img {
+        margin-top: -50px;
+    }
+    .fa{
+        font-size: 25px;
+    }
+
+
+    .card:hover {
+        background: $primary;
+        color: #fff;
+        .svg-inline--fa{
+            color: #fff;
+        }
+    }
+    
+}
+
+
+
+/* optional: full-viewport hero on large screens */
+@media (min-width: 992px) {
+    #showcase .row {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+    #showcase {
+        h1 {
+            font-size: 4rem;
+        }
     }
 }

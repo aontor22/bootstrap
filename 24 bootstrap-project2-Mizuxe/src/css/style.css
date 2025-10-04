@@ -1,11 +1,85 @@
 body {
   background: #fff;
+  color: #252525;
+  padding-top: 60px;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  background: rgba(255, 255, 255, 0.95);
+}
+.navbar .nav-fill {
+  font-size: 1.1rem;
+  padding-right: 20px;
+}
+.navbar .nav-fill .nav-link {
+  color: #252525;
+}
+.navbar .nav-fill .nav-link:hover {
+  color: #3292a6;
+}
+.navbar .nav-fill:last-child {
+  padding-right: 0;
 }
 
 #showcase {
-  background-image: url("../img/bg.jpg");
-  background: no-repeat;
+  position: relative;
+  background-image: url(../img/bg1.jpg);
 }
 #showcase .primary-overlay {
+  position: relative;
   background: rgba(50, 146, 156, 0.7);
+  width: 100%;
+}
+#showcase {
+  /* make the right column image fill and crop nicely */
+}
+#showcase .hero-img-col {
+  position: relative;
+  min-height: 600px;
+}
+#showcase .hero-img {
+  position: absolute;
+  inset: 0;
+  margin-left: 150px;
+  margin-top: 100px;
+  min-height: 200px;
+  width: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+#subscribe {
+  background: #252525;
+}
+
+#authors img {
+  margin-top: -50px;
+}
+#authors .fa {
+  font-size: 25px;
+}
+#authors .card:hover {
+  background: #3292a6;
+  color: #fff;
+}
+#authors .card:hover .svg-inline--fa {
+  color: #fff;
+}
+
+/* optional: full-viewport hero on large screens */
+@media (min-width: 992px) {
+  #showcase .row {
+    min-height: 100vh;
+  }
+}
+@media (max-width: 576px) {
+  #showcase h1 {
+    font-size: 4rem;
+  }
 }/*# sourceMappingURL=style.css.map */
